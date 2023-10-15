@@ -7,16 +7,9 @@ Created on Sat Oct 14 12:36:29 2023
 
 from flask import Flask, render_template, request, redirect, url_for  
 import random
+from all_questions import all_questions
 
 app = Flask(__name__)
-
-# Sample questions and answers  
-all_questions = [
-{"question": "The capital of France is ____.", "answer": "Paris"},
-{"question": "Python is a ____ language.", "answer": "programming"},
-{"question": "Which planet is closest to the sun?", "answer": "Mercury"},
-{"question": "The currency of the United States is ____.", "answer": "USD"}
-]
 
 cur_quest_idx = 0
 correct = 0
